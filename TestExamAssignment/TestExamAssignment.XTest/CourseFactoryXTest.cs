@@ -11,31 +11,42 @@ namespace TestExamAssignment.XTest
 {
     public class CourseFactoryXTest
     {
+		//Subjects
+	
+		//Courses
+		//Course course1 = new Course()
+		//{
+		//	CourseLenghtInHours = 60,
+		//	CourseStart = new DateTime(DateTime.Now.Year, 01, 01),
+		//	CourseSubject = subject1,
+		//	Name = "Matematik A niveau"
+		//};
 
-		[Fact]
-		public void CreateNewCourseTest()
+		//Semesters
+
+
+		[Theory]
+		[InlineData("Matematik", 60, "2019,01,01", 5, "Matematik A niveau" )]
+		public void CreateNewCourseTest(string subjectName, int courseLengthInHours, DateTime  courseStart,  int subjectConsecutive , string name)
 		{
-			Subject subject = new Subject()
-			{
-				Name = "Matematik",
-				ConsecutiveSemesters = 5
-			};
+			Subject subject = new Subject();
+			subject.Name = subjectName;
+			subject.ConsecutiveSemesters = subjectConsecutive;
 
 			CourseFactory factory = new CourseFactory();
-			bool result = factory.CreateNewCourse(subject);
+			bool result = factory.CreateNewCourse(subjectName, courseLengthInHours, courseStart, subject);
 			Assert.InRange(subject.ConsecutiveSemesters, 0, 6);
 			Assert.True(result);
 		}
 
-		[Fact]
+		[Theory]
 		public void AddCourseToSemesterTest()
 		{
 			Semester semester = new Semester();
-			Course course = new Course();
+			semester.Autumn = true;
+		
 			CourseFactory factory = new CourseFactory();
-
-			//factory.AddCourseToSemester(semester, course);
-
+			Assert.True(factory.AddCourseToSemester(semester, course1));
 
 		}
 	}

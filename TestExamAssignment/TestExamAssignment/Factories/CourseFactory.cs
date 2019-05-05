@@ -9,14 +9,17 @@ namespace TestExamAssignment.Factories
 {
 	public class CourseFactory
 	{
-		public bool CreateNewCourse()
-		{
-			throw new NotImplementedException();
-		}
 
-		public void AddCourseToSemester(Semester semester, Course course)
+		List<Course> listOfCourses = new List<Course>();
+
+		public bool AddCourseToSemester(Semester semester, Course course)
 		{
-			throw new NotImplementedException();
+			if (!semester.ListOfCourses.Contains(course))
+			{
+				listOfCourses.Add(course);
+				return true;
+			}
+			return false;
 		}
 
 		public bool CreateNewCourse(Subject subject)
