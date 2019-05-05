@@ -11,7 +11,7 @@ namespace TestExamAssignment.SchoolActivity
 	{
 		public string Name { get; set; }
 
-		public Subject Subject { get; set; }
+		public Subject CourseSubject { get; set; }
 
 		public int CourseLenghtInHours { get; set; }
 

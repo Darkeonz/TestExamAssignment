@@ -10,21 +10,37 @@ namespace TestExamAssignment.Factories
 	public class CourseFactory
 	{
 
-		List<Course> listOfCourses = new List<Course>();
+		public List<Course> ListOfCourses;
+
+		public CourseFactory() {
+			ListOfCourses = new List<Course>();
+		}
 
 		public bool AddCourseToSemester(Semester semester, Course course)
 		{
-			if (!semester.ListOfCourses.Contains(course))
+			if (!semester.listOfCourses.Contains(course))
 			{
-				listOfCourses.Add(course);
+				semester.listOfCourses.Add(course);
 				return true;
 			}
 			return false;
 		}
 
-		public bool CreateNewCourse(Subject subject)
+		public bool CreateNewCourse(string name, int courseLengthInHours, DateTime courseStart, Subject subject)
 		{
-			throw new NotImplementedException();
+			Course newCourse = new Course();
+			newCourse.Name = name;
+			newCourse.CourseLenghtInHours = courseLengthInHours;
+			newCourse.CourseStart = courseStart;
+			newCourse.CourseSubject = subject;
+
+			if (!ListOfCourses.Contains(newCourse))
+			{
+				ListOfCourses.Add(newCourse);
+				return true;
+			}
+			return false;
 		}
 	}
-}
+	}
+

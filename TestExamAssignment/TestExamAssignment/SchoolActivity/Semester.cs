@@ -9,10 +9,9 @@ namespace TestExamAssignment.SchoolActivity
 {
 	public class Semester
 	{
-		public bool Autumn { get; set; }
+		public DateTime SemesterStart { get; set; }
+		public List<Course> listOfCourses { get; set; }
 
-		public List<Course> ListOfCourses { get; set; }
-
-
+	
 	}
 }
