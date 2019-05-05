@@ -28,12 +28,8 @@ namespace TestExamAssignment.Factories
 
 		public bool CreateNewCourse(string name, int courseLengthInHours, DateTime courseStart, Subject subject)
 		{
-			Course newCourse = new Course();
-			newCourse.Name = name;
-			newCourse.CourseLenghtInHours = courseLengthInHours;
-			newCourse.CourseStart = courseStart;
-			newCourse.CourseSubject = subject;
-
+			Course newCourse = new Course { Name = name, CourseLenghtInHours = courseLengthInHours, CourseStart = courseStart, CourseSubject = subject };
+			
 			if (!ListOfCourses.Contains(newCourse))
 			{
 				ListOfCourses.Add(newCourse);
