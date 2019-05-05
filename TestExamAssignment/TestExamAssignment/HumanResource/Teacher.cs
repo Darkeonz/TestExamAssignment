@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TestExamAssignment
 {
-    public class Class1
-    {
-    }
+	class Teacher
+	{
+		public string Name { get; set; }
+
+		public int MyProperty { get; set; }
+	}
 }
