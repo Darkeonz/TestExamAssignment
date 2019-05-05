@@ -8,6 +8,7 @@ namespace TestExamAssignment
 {
     public class Student
     {
-		public string name { get; set; }
+		public string Name { get; set; }
+		public DateTime Birthday { get; set; }
 	}
 }

@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace TestExamAssignment.SchoolActivity
 {
-	class Semester
+	public class Semester
 	{
+		public bool Autumn { get; set; }
+
+		public List<Course> ListOfCourses { get; set; }
+
+
 	}
 }

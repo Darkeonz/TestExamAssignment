@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace TestExamAssignment.SchoolActivity
 {
-	class Subject
+	public class Subject
 	{
+		public string Name { get; set; }
+
+		public int ConsecutiveSemesters { get; set; }
 	}
 }
