@@ -61,12 +61,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestExamAssignment\TestExamAssignment.School.csproj">
-      <Project>{e7fed9a9-2b1f-4fdf-9ec1-7faab4c9306c}</Project>
-      <Name>TestExamAssignment.School</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestExamAssignment.School\TestExamAssignment.School.csproj">
+      <Project>{e7fed9a9-2b1f-4fdf-9ec1-7faab4c9306c}</Project>
+      <Name>TestExamAssignment.School</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
