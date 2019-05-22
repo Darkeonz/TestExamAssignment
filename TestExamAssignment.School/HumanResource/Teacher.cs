@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestExamAssignment.SchoolActivity;
 
 namespace TestExamAssignment
 {
 	class Teacher
 	{
-		public string Name { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
 
-		public int MyProperty { get; set; }
-	}
+        public List<Course> Course { get; set; }
+    }
 }

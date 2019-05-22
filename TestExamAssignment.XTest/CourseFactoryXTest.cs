@@ -35,12 +35,23 @@ namespace TestExamAssignment.XTest
 			DateTime courseStart = new DateTime(2019, 01, 01);			
 			Course course = new Course { Name = "Matematik a niveau", CourseLenghtInHours = 60, CourseSubject = subject, CourseStart = courseStart};
 			Semester semester = new Semester { SemesterStart = semesterStart };
-			semester.listOfCourses = new List<Course>();
+			semester.ListOfCourses = new List<Course>();
 
 			
 			bool result = factory.AddCourseToSemester(semester, course);
 			Assert.True(result);
 
 		}
+
+        [Fact]
+        public void CreateNewSemesterTest() {
+
+            DateTime semesterStart = new DateTime();
+            semesterStart = Convert.ToDateTime("2019,01,01");
+            CourseFactory factory = new CourseFactory();
+            Semester semester = new Semester { SemesterStart = semesterStart };
+            factory.AddNewSemesterToDB(semester);
+            
+        }
 	}
 }

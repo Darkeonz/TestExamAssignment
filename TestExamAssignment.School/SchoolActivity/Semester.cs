@@ -9,8 +9,9 @@ namespace TestExamAssignment.SchoolActivity
 {
 	public class Semester
 	{
-		public DateTime SemesterStart { get; set; }
-		public List<Course> listOfCourses { get; set; }
+        public int SemesterId { get; set; }
+        public DateTime SemesterStart { get; set; }
+		public List<Course> ListOfCourses { get; set; }
 
 	
 	}

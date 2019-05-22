@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestExamAssignment.SchoolActivity;
+using TestExamAssignment.Database;
+using System.Data.SQLite;
 
 namespace TestExamAssignment.Factories
 {
 	public class CourseFactory
 	{
 
-		public List<Course> ListOfCourses;
+
+        DatabaseHandler DBHandler = new DatabaseHandler();
+        public List<Course> ListOfCourses;
 
 		public CourseFactory() {
 			ListOfCourses = new List<Course>();
@@ -18,9 +22,9 @@ namespace TestExamAssignment.Factories
 
 		public bool AddCourseToSemester(Semester semester, Course course)
 		{
-			if (!semester.listOfCourses.Contains(course))
+			if (!semester.ListOfCourses.Contains(course))
 			{
-				semester.listOfCourses.Add(course);
+				semester.ListOfCourses.Add(course);
 				return true;
 			}
 			return false;
@@ -37,6 +41,18 @@ namespace TestExamAssignment.Factories
 			}
 			return false;
 		}
-	}
+
+        //Adds a new semester to the Database
+        public void AddNewSemesterToDB(Semester semester)
+        {
+            string query = "INSERT INTO Semester {'SemesterStart') VALUES (@SemesterStart)}";
+            SQLiteCommand myCommand = new SQLiteCommand(query, DBHandler.myConnection);
+            DBHandler.OpenConnection();
+            DBHandler.myConnection.Open();
+            myCommand.Parameters.AddWithValue("@SemesterStart", semester.SemesterStart);
+            myCommand.ExecuteNonQuery();
+            DBHandler.CloseConnection();
+        }
+    }
 	}
 

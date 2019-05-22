@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestExamAssignment
 {
-	class Administrative
+	public class Administrative
 	{
 	}
 }
