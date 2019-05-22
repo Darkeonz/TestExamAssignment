@@ -44,13 +44,15 @@ namespace TestExamAssignment.XTest
 		}
 
         [Fact]
-        public void CreateNewSemesterTest() {
+        public void CreateNewSemesterWithInvalidDatetimeTest() {
 
             DateTime semesterStart = new DateTime();
             semesterStart = Convert.ToDateTime("2019,01,01");
             CourseFactory factory = new CourseFactory();
             Semester semester = new Semester { SemesterStart = semesterStart };
             factory.AddNewSemesterToDB(semester);
+
+            
             
         }
 	}
