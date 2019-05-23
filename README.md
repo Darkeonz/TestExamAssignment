@@ -9,7 +9,7 @@ Current tests in the project
 
 There are no nonfunctional tests.
 
-I used my time on backend part of the project, but my goal was to eventually make it web based and then use selenium for the UI tests.
+I used my time on the backend part of the project, but my goal was to eventually make it web based and then use selenium for the UI tests.
 Due to not having an UI, some tests were unable to be done, such as a smoketest and acceptance test
 
 Had the UI been implemented, the next step would be to include
