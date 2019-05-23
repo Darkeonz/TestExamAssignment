@@ -19,7 +19,7 @@ Had the UI been implemented, the next step would be to include
 
 As well as relevant nonfunctional tests.
 
-All the tests were written in Xunit in C#. I created a seperate database for testing, which is located in the TestExamAssignment\TestExamAssignment.XTest\bin\Debug folder.
+All the tests were written in Xunit in C#. I created a seperate test database for integration testing, which is located in the TestExamAssignment\TestExamAssignment.XTest\bin\Debug folder.
 
 
 (Trello)
