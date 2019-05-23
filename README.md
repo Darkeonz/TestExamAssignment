@@ -6,7 +6,7 @@ My main goal of this assignment was to do testdriven development using stub. I c
 ![alt text](https://i.gyazo.com/4bd46d5564a7ad0c1f6fc6f845df7012.png)
 I broke down the customer requirments into specific usertasks. For this I used Trello. I added bulletpoints on each task with specific requirments related to the task. 
 
-I had tried doing the usertasks in cucumber, but due to the time contrains I decided to break down the tasks manually.
+I tried doing the usertasks in cucumber, but due to the time contrains I eventually decided to break down the tasks manually.
 
 
 (GIT)
@@ -20,6 +20,8 @@ I did not have time to implement an UI, but my goal was to make it web based an 
 
 
 Issues:
+
+The first problem I ran into was errors with the Travis instructions file and Xunit, as it the documentation for using Xunit with Travis is very dated. Several versions of Xunit would not work with travis and the build would fail everytime it build it. Eventually through much research, I discovered that xunit.runner.console -Version 2.4.1 worked for others with the same issue. 
 
 One problem that occured when working with my SQLite database, was that all the integrationstests failed in travis but not on my local develop environment. 
 
