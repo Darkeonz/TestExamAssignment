@@ -3,6 +3,7 @@
 My main goal of this assignment was to do testdriven development using stub. I created the tests and implemented the methods with a "NotImplemented" exception thrown. The test would fail. I then worked on the method to make the test succeed. 
 
 (Trello)
+
 ![alt text](https://i.gyazo.com/4bd46d5564a7ad0c1f6fc6f845df7012.png)
 I broke down the customer requirments into specific usertasks. For this I used Trello. I added bulletpoints on each task with specific requirments related to the task. 
 
