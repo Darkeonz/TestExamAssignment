@@ -60,21 +60,30 @@ namespace TestExamAssignment.Factories
             SQLiteCommand myCommand = new SQLiteCommand(query, DBHandler.myConnection);
             DBHandler.OpenConnection();        
             SQLiteDataReader result = myCommand.ExecuteReader();
-            DBHandler.CloseConnection();
             List<Semester> semester = new List<Semester>();
             if (result.HasRows)
             {
                 while (result.Read())
                 {
                     Semester tempSemester = new Semester();
+
                     Course tempCourse = new Course();
+                    tempCourse.CourseLenghtInHours = 1;
+                    tempCourse.CourseStart = Convert.ToDateTime("2019-01-01");
+                    tempCourse.Name = "CourseName";
+
+                    tempCourse.CourseSubject = new Subject();
+                    tempCourse.CourseSubject.ConsecutiveSemesters = 1;
+                    tempCourse.CourseSubject.Name = "SubjectName";
+                   
                     tempSemester.ListOfCourses.Add(tempCourse);
                     tempSemester.SemesterId = result.GetInt32(0);
                     tempSemester.SemesterStart = Convert.ToDateTime(result.GetString(1));
                     semester.Add(tempSemester);
                 }
-            }       
-            return semester;
+            }
+            DBHandler.CloseConnection();
+            return semester;           
         }
     }
 	}
