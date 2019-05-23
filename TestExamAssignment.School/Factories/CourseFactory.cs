@@ -44,14 +44,37 @@ namespace TestExamAssignment.Factories
 
         //Adds a new semester to the Database
         public void AddNewSemesterToDB(Semester semester)
-        {
-            string query = "INSERT INTO Semester {'SemesterStart') VALUES (@SemesterStart)}";
+        {           
+            string query = "INSERT INTO Semester ('SemesterStart') VALUES (@semesterStart)";
             SQLiteCommand myCommand = new SQLiteCommand(query, DBHandler.myConnection);
-            DBHandler.OpenConnection();
-            DBHandler.myConnection.Open();
-            myCommand.Parameters.AddWithValue("@SemesterStart", semester.SemesterStart);
+            DBHandler.OpenConnection();           
+            myCommand.Parameters.AddWithValue("@semesterStart", semester.SemesterStart.ToString());
             myCommand.ExecuteNonQuery();
             DBHandler.CloseConnection();
+        }
+
+        // Returns all the semesters
+        public List<Semester> SelectAllSemestersFromDatabase()
+        {
+            string query = "SELECT * FROM Semester";
+            SQLiteCommand myCommand = new SQLiteCommand(query, DBHandler.myConnection);
+            DBHandler.OpenConnection();        
+            SQLiteDataReader result = myCommand.ExecuteReader();
+            DBHandler.CloseConnection();
+            List<Semester> semester = new List<Semester>();
+            if (result.HasRows)
+            {
+                while (result.Read())
+                {
+                    Semester tempSemester = new Semester();
+                    Course tempCourse = new Course();
+                    tempSemester.ListOfCourses.Add(tempCourse);
+                    tempSemester.SemesterId = result.GetInt32(0);
+                    tempSemester.SemesterStart = Convert.ToDateTime(result.GetString(1));
+                    semester.Add(tempSemester);
+                }
+            }       
+            return semester;
         }
     }
 	}

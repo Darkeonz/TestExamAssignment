@@ -9,11 +9,11 @@ namespace TestExamAssignment.Database
         public SQLiteConnection myConnection;
 
         public DatabaseHandler() {
-            myConnection = new SQLiteConnection("Data Source=TestDatabase");
+            myConnection = new SQLiteConnection("Data Source=TestDatabase.db");
 
-            if (!File.Exists("./TestDatabase"))
+            if (!File.Exists("./TestDatabase.db"))
             {
-                SQLiteConnection.CreateFile("TestDatabase");
+                SQLiteConnection.CreateFile("TestDatabase.db");
                 System.Console.WriteLine("Database is created");
             }          
         }
