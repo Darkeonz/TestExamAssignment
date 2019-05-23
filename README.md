@@ -1,6 +1,12 @@
 # TestExamAssignment
 
-This project includes the following tests:
+My main goal of this assignment was to do testdriven development using stub. I created the tests and implemented the methods with a "NotImplemented" exception thrown. The test would fail. I then worked on the method to make the test succeed. 
+
+(GIT)
+I've created an additional branch called develop. The reason I've done this is because I find it ineffective to run travis everytime I do a push to the github repository. The goal is to only run travis whenever I do a pull from the develop branch into the master branch. This also allows others to do code reviews on my code and approve it. This might not be relevant as I am a solo group, but at least I avoid a million small builds ;).
+
+Link for Travis CI.
+https://travis-ci.com/Darkeonz/TestExamAssignment
 
 
 Issues:
