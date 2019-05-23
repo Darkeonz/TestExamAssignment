@@ -2,6 +2,17 @@
 
 My main goal of this assignment was to do testdriven development using stub. I created the tests and implemented the methods with a "NotImplemented" exception thrown. The test would fail. I then worked on the method to make the test succeed. 
 
+Current tests in the project
+Unit tests
+Integration tests
+Regression tests
+
+There are no nonfunctional tests.
+
+(UI)
+I did not have time to implement an UI, but my goal was to make it web based an use selenium for some UI tests.
+Due to not having an UI, some tests were unable to be done, such as a smoketest and acceptance test
+
 (Trello)
 
 ![alt text](https://i.gyazo.com/4bd46d5564a7ad0c1f6fc6f845df7012.png)
@@ -15,9 +26,6 @@ I've created an additional branch called develop. The reason I've done this is b
 
 Link for Travis CI.
 https://travis-ci.com/Darkeonz/TestExamAssignment
-
-(UI)
-I did not have time to implement an UI, but my goal was to make it web based an use selenium for some UI tests.
 
 
 Issues:
