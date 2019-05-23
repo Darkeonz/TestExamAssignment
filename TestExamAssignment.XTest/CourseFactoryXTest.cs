@@ -44,7 +44,7 @@ namespace TestExamAssignment.XTest
 			Assert.True(result);
 
 		}
-
+        // Integrationstests.
         [Fact]
         public void CreateNewSemesterTest() {
             Semester semester = new Semester();         
