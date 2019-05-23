@@ -3,9 +3,9 @@
 My main goal of this assignment was to do testdriven development using stub. I created the tests and implemented the methods with a "NotImplemented" exception thrown. The test would fail. I then worked on the method to make the test succeed. 
 
 Current tests in the project
-Unit tests
-Integration tests
-Regression tests
+- Unit tests
+- Integration tests
+- Regression tests
 
 There are no nonfunctional tests.
 
