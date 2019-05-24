@@ -42,7 +42,7 @@ Issues:
 
 (Entity framework)
 
-I am a big fan of the entity framework as it allows a user to do a lot with just a few Lambda expressions. Due to the fact that I choose to use a SQLite database, and that the frameworks newer versions doesn't allow to do a Code First approach to an SQLite database, I had to abandon the framework. It was either abandon the SQLite database or the framework. I decided to keep the database and interact with it in a more "old fashion" kind of way. I do feel strongly that the Entity Framework is a great and easily tested framework due to it's simply methods.  
+I am a big fan of the entity framework as it allows a user to do a lot with just a few Lambda expressions. Due to the fact that I choose to use a SQLite database, and that the frameworks newer versions doesn't allow to do a Code First approach to an SQLite database, I had to abandon the framework. It was either abandon the SQLite database or the framework. I decided to keep the database and interact with it in a more "old fashion" kind of way. I do feel strongly that the Entity Framework is a great and easily tested framework due to it's simple methods.  
 
 The first problem I ran into was errors with the Travis instructions file and Xunit, as it the documentation for using Xunit with Travis is very dated. Several versions of Xunit would not work with travis and the build would fail everytime it build it. Eventually through much research, I discovered that xunit.runner.console -Version 2.4.1 worked for others with the same issue. 
 
